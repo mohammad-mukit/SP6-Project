@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'color/default.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="">
+
+    <!-- =======================================================
+	======================================================= -->
+</head>
+
+<body>
+
+    <div class="navbar-wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Responsive navbar -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                            class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </a>
+                    <h1 class="brand"><a href="{% url 'home' %}">Home</a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="about" class="section">
+        <div class="container">
+            <h4>Who We Are</h4>
+            <div class="row">
+                <div class="span4 offset1">
+                    <div>
+                        <h2>We live with <strong>creativity</strong></h2>
+                        <p>
+                            We are Team VENOM. There are 3 members in our group. Everyone has a different skill in our
+                            group.
+                            We work together and celebrate together.
+                            We are honest, brave, hardworking. We trust each other.
+                            We try to learn from our mistakes.
+                            <strong>Our motto is either be a game changer or do not play.</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="aligncenter">
+                        <img src="{% static 'img/icons/creativity.png' %}" alt="" />
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row">
+                <div class="span2 offset1 flyIn" >
+                    <div class="people" >
+                        <img class="team-thumb img-circle" src="{% static 'img/team/mukit1.jpg' %}" alt="" />
+                        <h3>Mohammad Mukit</h3>
+                        <h5>ID: 191-15-12302</h5>
+                        <h5>Section: J</h5>
+                        <h5>CSE</h5>
+
+
+                        <p>
+                            Computer Programmer
+                        </p>
+                        <a href="https://sites.google.com/diu.edu.bd/mohammadmukit" target="blank">
+                            <button>Website</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="span2 flyIn" style="margin-left: 100px;">
+                    <div class="people" >
+                        <img class="team-thumb img-circle" src="{% static 'img/team/rabbi.jpg' %}" alt="rabbi" />
+                        <h3>Moshiul Huq Rabbi</h3>
+                        <h5>ID: 191-15-12574</h5>
+                        <h5>Section: J</h5>
+                        <h5>CSE</h5>
+
+                        <p>
+                            Computer Programmer
+                        </p>
+                        <a href="http://rabbii.me" target="blank"><button>Website</button></a>
+                    </div>
+                </div>
+                <div class="span2 flyIn" style="margin-left: 100px;">
+                    <div class="people" >
+                        <img class="team-thumb img-circle" src="{% static 'img/team/masud.jpg' %}" alt="" />
+                        <h3>Masud Ahmed</h3>
+                        <h5>ID: 191-15-12364</h5>
+                        <h5>Section: J</h5>
+                        <h5>CSE</h5>
+
+                        <p>
+                            Fullstack Developer
+                        </p>
+                        <a href="https://sites.google.com/diu.edu.bd/ahmed-masud/home" target="blank">
+                            <button>Website</button>
+                        </a>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-----------------============================================================----------------->
+    <a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollTo.js' %}"></script>
+    <script src="{% static 'js/jquery.nav.js' %}"></script>
+    <script src="{% static 'js/jquery.localScroll.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+    <script src="{% static 'js/jquery.flexslider.js' %}"></script>
+    <script src="{% static 'js/inview.js' %}"></script>
+    <script src="{% static 'js/animate.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'contactform/contactform.js' %}"></script>
+
+</body>
