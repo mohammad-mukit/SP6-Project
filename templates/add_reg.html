@@ -1,0 +1,48 @@
+{% extends "layout.html" %} 
+{% block body %}
+
+
+<h1 style="text-align: center;"><br>Register New Student<br><br><br></h1>
+
+
+
+<div class="center" >
+
+
+
+
+{% if msg %}
+<div class="alert alert-warning" role="alert"><strong>{{msg}}</strong></div>
+{% endif %} 
+
+
+<form action="{% url 'add_student' %}" method="post">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label >Enter Name</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Enter ID</label>
+            <input type="text" name="id" class="form-control" placeholder="12345">
+        </div>
+    </div>
+    <div class="form-group ">
+        <label>Enter Department</label>
+        <input type="text" name="department" class="form-control">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Enter section</label>
+            <input type="text" name="section" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Enter payment</label>
+            <input type="text" name="payment"class="form-control" placeholder="Paid/Unpaid" >
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+{% endblock %}
