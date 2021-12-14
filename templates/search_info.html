@@ -1,0 +1,27 @@
+{% extends "layout.html" %} 
+{% block body %}
+<style>
+.centerr {
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+
+}
+</style>
+
+    <h1 style="text-align: center;"><br>Search Profile<br><br><br></h1>
+    <div class="centerr">
+        <form action="{% url 'search' %}">
+            <div class="form-group ">
+            <div class="form-row">
+                <label>Enter ID </label>
+             <input type="text" placeholder="123-45-67890" class="form-control" name="id"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+    </div>
+
+        </form>
+    </div>
+{% endblock %}

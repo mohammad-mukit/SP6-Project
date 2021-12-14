@@ -65,3 +65,19 @@ def add_student(request):
         return render(request, "add_reg.html", {"msg": msg})
     else:
         return render(request, "add_reg.html")
+
+
+
+def search(request):
+    query = request.GET.get("id")
+    
+    if query:
+        if not StudentInfo.objects.filter(id__contains=query).exists():
+            msg = "This Id is not registered "
+            return render(request,"single_info.html",{"msg":msg})
+        else:
+            student = StudentInfo.objects.filter(id__contains=query)
+            
+        return render(request,"single_info.html",{"student":student})
+    else:
+        return render(request,"search_info.html")
