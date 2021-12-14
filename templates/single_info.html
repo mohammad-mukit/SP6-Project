@@ -1,0 +1,31 @@
+{% extends "layout.html" %} 
+{% block body %}
+
+
+<center>
+
+
+  {% if msg %}
+<div class="alert alert-warning" role="alert"><strong>{{msg}}</strong></div>
+{% else %}
+
+
+    <h2>You are Looking For:</h2>
+    <br>
+    {% for student in student %}
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header"><strong>{{ student.name }}</strong></div>
+    <div class="card-body text-dark">
+    <h5 class="card-title"><strong>ID: {{ student.id }}</h5></strong>
+    <p class="card-text"><h4>Section: {{ student.section }}</h4>
+    <h4>Department: {{ student.department }}</h4>
+    <h4>Payment Status: {{ student.payment }}</h4>
+    {% endfor %}
+    <a href="{% url 'search' %}"><center><i class="fa fa-arrow-circle-left" style="font-size:36px"></i></a> </center>
+    </p>
+  </div>
+</div>
+{% endif %} 
+    </center>
+
+{% endblock %}
