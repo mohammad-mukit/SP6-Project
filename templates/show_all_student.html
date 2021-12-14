@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %} 
+{% block body %}
+
+
+<center>
+
+{% if msg %}
+<div class="alert alert-warning" role="alert"><strong>{{msg}}</strong></div>
+{% endif %} 
+
+
+
+
+    <h1 style="text-align: center;"> Information of all Students<br></h1>
+    <br>
+    <h3>Number of Students Registered: {{c}}<br><br></h2>
+    {% for student in student %}
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header"><strong>{{ student.name }}</strong></div>
+    <div class="card-body text-dark">
+    <h5 class="card-title"><strong>ID: {{ student.id }}</h5></strong>
+    <p class="card-text"><h4>Section: {{ student.section }}</h4>
+    <h4>Department: {{ student.department }}</h4>
+    <h4>Payment Status: {{ student.payment }}</h4>
+
+    <button type="button">
+      <a>Delete !</a>
+  </button>
+
+
+    </p>
+  </div>
+</div>
+      
+    {% endfor %}
+
+</center>
+
+{% endblock %}

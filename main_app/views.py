@@ -81,3 +81,8 @@ def search(request):
         return render(request,"single_info.html",{"student":student})
     else:
         return render(request,"search_info.html")
+
+def show_all_student(request):
+    students = StudentInfo.objects.all()
+    c = StudentInfo.objects.count()
+    return render(request,"show_all_student.html",{"student":students,"c":c})
