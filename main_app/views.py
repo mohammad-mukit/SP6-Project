@@ -86,3 +86,12 @@ def show_all_student(request):
     students = StudentInfo.objects.all()
     c = StudentInfo.objects.count()
     return render(request,"show_all_student.html",{"student":students,"c":c})
+
+
+def delete(request,pk):
+    student = StudentInfo.objects.get(pk=pk)
+    student.delete()
+    msg = "Deleted Successfully"
+
+    return render(request,"delete_success.html",{"msg":msg})
+

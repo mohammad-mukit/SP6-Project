@@ -25,7 +25,7 @@
     <h4>Payment Status: {{ student.payment }}</h4>
 
     <button type="button">
-      <a>Delete !</a>
+      <a href="{% url 'delete' student.id %}">Delete !</a>
   </button>
 
 

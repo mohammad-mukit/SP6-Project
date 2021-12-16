@@ -11,5 +11,6 @@ urlpatterns = [
     path('add_student',views.add_student,name="add_student"),
     path('search/',views.search,name="search"),
     path('show_all_student/',views.show_all_student,name="show_all_student"),
+    path('delete/<int:pk>',views.delete,name="delete"),
     
 ]
